@@ -38,6 +38,8 @@ Buatlah file .github/workflows/compile.yml. Isinya sebagai berikut:
           with:
             name: PDF
             path: main.pdf
+            
+*Compile* akan dijalankan ketika ada perubahan pada tex files. 
        
 
 .. Referensi
