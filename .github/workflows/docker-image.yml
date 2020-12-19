@@ -3,15 +3,10 @@ name: Docker Image CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+
 jobs:
-
   build:
-
     runs-on: aergus/latex
-
     steps:
+      - uses: actions/checkout@v1
       - run: pdflatex main.tex
-    outputs: 
-      key: main.pdf
