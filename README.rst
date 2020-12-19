@@ -18,7 +18,7 @@ Buatlah file .github/workflows/compile.yml. Isinya sebagai berikut:
 
 ::
 
-  name: Build LaTeX document
+  name: Build LaTeX Document
   on:
     push:
       paths:
