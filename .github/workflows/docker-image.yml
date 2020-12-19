@@ -1,12 +1,11 @@
-name: Docker Image CI
-
-on:
-  push:
-    branches: [ main ]
-
+name: Build LaTeX document
+on: [push]
 jobs:
-  build:
-    runs-on: aergus/latex
+  build_latex:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - run: pdflatex main.tex
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile LaTeX document
+        run: |
+          pdflatex main.tex
