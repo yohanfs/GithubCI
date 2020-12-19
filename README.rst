@@ -16,7 +16,8 @@ Github Actions File
 
 Buatlah file .github/workflows/compile.yml. Isinya sebagai berikut:
 
-```
+::
+
   name: Build LaTeX document
   on:
     push:
@@ -37,7 +38,7 @@ Buatlah file .github/workflows/compile.yml. Isinya sebagai berikut:
           with:
             name: PDF
             path: main.pdf
-```          
+       
 
 .. Referensi
 
