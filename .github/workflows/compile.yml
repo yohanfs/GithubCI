@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Build LaTeX Document
 on:
   push:
     paths:
@@ -13,7 +13,7 @@ jobs:
         uses: xu-cheng/latex-action@master
         with:
           root_file: main.tex
-      - name: Uplod PDF 
+      - name: Upload PDF 
         uses: actions/upload-artifact@v1
         with:
           name: PDF
