@@ -17,26 +17,26 @@ Github Actions File
 Buatlah file .github/workflows/compile.yml. Isinya sebagai berikut:
 
 ```
-name: Build LaTeX document
-on:
-  push:
-    paths:
-    - '**.tex'
-jobs:
-  build_latex:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v1
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@master
-        with:
-          root_file: main.tex
-      - name: Uplod PDF 
-        uses: actions/upload-artifact@v1
-        with:
-          name: PDF
-          path: main.pdf
+  name: Build LaTeX document
+  on:
+    push:
+      paths:
+      - '**.tex'
+  jobs:
+    build_latex:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Set up Git repository
+          uses: actions/checkout@v1
+        - name: Compile LaTeX document
+          uses: xu-cheng/latex-action@master
+          with:
+            root_file: main.tex
+        - name: Uplod PDF 
+          uses: actions/upload-artifact@v1
+          with:
+            name: PDF
+            path: main.pdf
 ```          
 
 .. Referensi
