@@ -10,3 +10,8 @@ jobs:
         uses: xu-cheng/latex-action@master
         with:
           root_file: main.tex
+      - name: obtained PDF 
+        uses: actions/upload-artifact@v1
+        with:
+          name: PDF
+          path: main.pdf
